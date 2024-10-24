@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="testcase.TestCase1">
+        <methods>
+          <include name="Setup"/>
+          <include name="tearDown"/>
+          <include name="Verfying_4thRow"/>
+          <include name="Verfying_Gender_In_Rows"/>
+          <include name="Verfying_5thRow"/>
+          <include name="Verfying_3rdRow"/>
+        </methods>
+      </class> <!-- testcase.TestCase1 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
