@@ -44,7 +44,6 @@ public class TestCase1 extends baseTest {
     	String actualName = driver.findElement(By.xpath("//tr[2]/td[1]")).getText();
     	String actualAge = driver.findElement(By.xpath("//tr[2]/td[2]")).getText();
     	
-    	
     	softassert.assertEquals(actualName, expectedName,"Name verification");
     	softassert.assertEquals(actualAge, expectedAge,"Age verification");
     	softassert.assertAll();
