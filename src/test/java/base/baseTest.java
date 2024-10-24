@@ -33,6 +33,7 @@ public class baseTest {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.get(pro.getProperty("testurl"));
+			
 		}
 		if(pro.getProperty("browser").equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();

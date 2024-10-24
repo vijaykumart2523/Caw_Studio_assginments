@@ -24,6 +24,7 @@ public  void Validating_Table() {
         // Navigate to the web page
         driver.get("https://testpages.herokuapp.com/styled/tag/dynamic-table.html");
 
+        
         // Edit the JSON data and refresh the table
         driver.findElement(By.xpath("/html/body/div/div[3]/details/summary")).click();
         driver.findElement(By.xpath("//*[@id=\"jsondata\"]")).clear();
