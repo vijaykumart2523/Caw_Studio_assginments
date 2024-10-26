@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.TestCase1">
+      <class name="testcase.DynamicTableTest">
         <methods>
-          <include name="Setup"/>
-          <include name="tearDown"/>
-          <include name="Verfying_4thRow"/>
-          <include name="Verfying_Gender_In_Rows"/>
-          <include name="Verfying_5thRow"/>
-          <include name="Verfying_3rdRow"/>
+          <include name="testDynamicTable"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="loadTestData"/>
         </methods>
-      </class> <!-- testcase.TestCase1 -->
+      </class> <!-- testcase.DynamicTableTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
