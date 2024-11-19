@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.PracticeCaw">
+      <class name="testcase.NegativeTestCases">
         <methods>
-          <include name="testDynamicTable"/>
-          <include name="loadTestData"/>
           <include name="Setup"/>
-          <include name="teardown"/>
-          <include name="tearDown"/>
+          <include name="loadTestData"/>
+          <include name="captureScreenshotOnFailure"/>
+          <include name="testDynamicTableWithNegativeData"/>
         </methods>
-      </class> <!-- testcase.PracticeCaw -->
+      </class> <!-- testcase.NegativeTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

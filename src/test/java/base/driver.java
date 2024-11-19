@@ -1,17 +1,22 @@
 package base;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONArray;
 
 import org.json.simple.parser.JSONParser;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -70,12 +75,25 @@ public class driver {
 		        }
 		        
 		    }
+		    public void takeScreenshot(String fileName) { 
+		    	File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); 
+		    	try { FileUtils.copyFile(screenshot, new File("path/to/screenshots/" + fileName + ".png")); 
+		    	} catch (IOException e) 
+		    	{ e.printStackTrace(); 
+		    	} 
+		    	} 
+		    @AfterMethod 
+		    public void captureScreenshotOnFailure(ITestResult result) { 
+		    	if (ITestResult.FAILURE == result.getStatus()) { takeScreenshot(result.getName());
+		    	}
+		    }
 	
 		@AfterMethod()
 		public void tearDown() {
 			driver.close();
 			System.out.println("Teardown succesful");
 		}
+		
 		
 
 	}

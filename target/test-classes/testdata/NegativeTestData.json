@@ -1,0 +1,7 @@
+[
+    {"name": "Bob", "age": "twenty", "gender": "male"},       
+    {"name": "", "age": 42, "gender": "male"},                
+    {"name": "Sara", "age": -1, "gender": "female"},          
+    {"name": "Conor", "age": 40, "gender": "unknown"},        
+    {"name": null, "age": 42, "gender": "female"}             
+]
